@@ -14,9 +14,6 @@
 <body>
     <header class="container">
         <div class="page-header">
-            <div class="logo">
-                <a href="#">Logo.</a>
-            </div>
             <input type="checkbox" id="click">
 
             <label for="click" class="mainicon">
@@ -24,13 +21,13 @@
                     <i class='bx bx-menu'></i>
                 </div>
             </label>
-            <ul>
-                <li><a href="#"  class="active" style="--navAni:1">Home</a></li>
-                <li><a href="#" style="--navAni:2">About</a></li>
-                <li><a href="#" style="--navAni:3">Skills</a></li>
-                <li><a href="#" style="--navAni:4">Portfolio</a></li>
-                <li><a href="#" style="--navAni:5">Contact</a></li>
-            </ul>
+                <ul>
+                    <li><a href="index.html" style="--navAni:1">Home</a></li>
+                    <li><a href="#" style="--navAni:2">About</a></li>
+                    <li><a href="#skills" style="--navAni:3">Skills</a></li>
+                    <li><a href="#" style="--navAni:4">Portfolio</a></li>
+                    <li><a href="#" style="--navAni:5">Contact</a></li>
+                </ul>
             <label class="mode">
                 <input type="checkbox" id="darkbtn">
                 <i class='bx bxs-moon'></i>
@@ -67,11 +64,41 @@
             </div>
         </div>
     </section>
-    
+    <br>
+    <section class="container" id="skills">
+        <div class="skills">
+            <h1>Skills</h1>
+        <h2>Languages</h2>
+        <ul>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>PHP</li>
+            <li>C++</li>
+            <li>C#</li>
+            <li>Python</li>
+        </ul>
+
+        <h2>Frontend</h2>
+        <ul>
+            <li>ReactJS</li>
+            <li>ReduxJS</li>
+            <li>CSS</li>
+            <li>HTML</li>
+        </ul>
+
+        <h2>Backend</h2>
+        <ul>
+            <li>Ruby on Rails</li>
+            <li>Node JS</li>
+            <li>MySQL</li>
+            <li>MongoDB</li>
+        </ul>
+        </div>
+    </section>
+
     <script>
 
-
-                const darkbtn = document.getElementById('darkbtn');
+        const darkbtn = document.getElementById('darkbtn');
         const body = document.body;
         const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
         if (isDarkMode) {
@@ -89,6 +116,7 @@
             }
         });
 
+
         function downloadCV() {
             const cvUrl = 'https://github.com/LawunnKhaing/Portfolio/raw/main/Lawunn%20CV.pdf';
 
@@ -99,7 +127,6 @@
             link.click();
             document.body.removeChild(link);
         }
-
     </script>
 </body>
 

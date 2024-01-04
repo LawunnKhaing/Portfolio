@@ -47,18 +47,6 @@ header {
     padding: 1rem 0;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    opacity: 0;
-    animation: leftSideAni 1s ease forwards;
-}
-
-.logo a {
-    color: #000;
-    text-decoration: none;
-}
-
 ul {
     display: flex;
     gap: .6rem;
@@ -202,7 +190,8 @@ background: linear-gradient(to right, #F7086C 0%, #35c9fc 100%);
 
 .images {
     width: 80%;
-    margin-left: auto;
+    margin: auto;
+    margin-top: 2rem;
     position: relative;
     z-index: -1;
 }
@@ -448,4 +437,66 @@ background: linear-gradient(to right, #F7086C 0%, #35c9fc 100%);
         width: 88%;
         margin: auto;
     }
+}
+
+
+body {
+    font-family: 'Outfit', sans-serif;
+}
+
+.container {
+    padding: 0 8.4rem;
+}
+
+.skills {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.skills h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    opacity: 0;
+    animation: topSideAni 1s ease forwards;
+}
+
+/* .skills h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+} */
+
+.skills h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    animation:  rightSideAni 1s ease forwards;
+}
+
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills li {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, #F7086C 0%, #35c9fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 1.6px solid;
+    border-radius: 10px;
+    padding: 0.39rem;
+    cursor: pointer;
+    text-align: center; /* Add this line to center the text */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.skills li:hover {
+    background-color: var(--primary-color);
+    color: #fff;
 }
