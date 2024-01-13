@@ -127,12 +127,12 @@ background: linear-gradient(to right, #F7086C 0%, #35c9fc 100%);
     row-gap: 2rem;
     align-items: center;
 }
-.main h3 {
+/* .main h3 {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     opacity: 0;
     animation: rightSideAni 1s ease forwards;
-}
+} */
 .main h1 {
     font-size: 3.5rem;
     font-weight: 600;
@@ -466,6 +466,7 @@ body {
     color: var(--primary-color);
 } */
 
+
 .skills h2 {
     font-size: 2rem;
     font-weight: 600;
@@ -491,14 +492,53 @@ body {
     border: 1.6px solid;
     border-radius: 10px;
     padding: 0.39rem;
-    cursor: pointer;
     text-align: center; /* Add this line to center the text */
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .skills li:hover {
-    background-color: var(--primary-color);
-    color: #fff;
+    -webkit-text-fill-color: var(--primary-dark);
+    background: linear-gradient(90deg, rgba(255,95,109,1) 0%, rgba(53,201,252,1) 100%);
+    box-shadow: 0 0 20px;
+    transition: all .3s ease-in-out;
+}
+
+.networking ul{
+
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.networking li {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, #F7086C 0%, #35c9fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 1.6px solid;
+    border-radius: 10px;
+    padding: 0.39rem;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.networking h2{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+    animation:  rightSideAni 1s ease forwards;
+}
+
+.networking a{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    animation:  rightSideAni 1s ease forwards;
 }
 
 .Contact {
@@ -519,4 +559,12 @@ body {
     margin-bottom: 1rem;
     text-align: center; 
     animation:  rightSideAni 1s ease forwards;
+}
+
+.social {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    justify-content: center;
 }

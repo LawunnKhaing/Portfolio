@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="intro.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header class="container">
+        <div class="page-header">
+            <input type="checkbox" id="click">
+
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </label>
+                <ul>
+                    <li><a href="index.html" style="--navAni:1">Home</a></li>
+                    <li><a href="skills.html" style="--navAni:3">Skills</a></li>
+                    <li><a href="#" style="--navAni:4">Projects</a></li>
+                    <li><a href="contact.html" style="--navAni:5">Contact</a></li>
+                </ul>
+            <label class="mode">
+                <input type="checkbox" id="darkbtn">
+                <i class='bx bxs-moon'></i>
+            </label>
+        </div>
+    </header>
+
+    <section class="container" id="skills">
+        <div class="skills">
+            <h1>Skills</h1>
+        <h2>Languages</h2>
+        <ul>
+        
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>PHP</li>
+            <li>C++</li>
+            <li>C#</li>
+            <li>Python</li>
+        </ul>
+        <h2>Frontend</h2>
+        <ul>
+            <li>ReactJS</li>
+            <li>ReduxJS</li>
+            <li>CSS</li>
+            <li>HTML</li>
+        </ul>
+
+        <h2>Backend</h2>
+        <ul>
+            <li>Ruby on Rails</li>
+            <li>Node JS</li>
+            <li>MySQL</li>
+            <li>MongoDB</li>
+        </ul>
+        </div>
+
+        <div class="networking">
+            <h2>Networking</h2>
+            <ul>
+            <li><a href="https://www.credly.com/badges/3c20b681-a985-4bd9-a2b7-779ec002aacc/linked_in_profile/">Networking Essentials</a></li>
+            <li><a href="https://www.credly.com/badges/e223fd53-7de3-4c7f-8443-b8bd9da08c4f/linked_in_profile">Switching, Routing and Wireless Essentials</a></li>
+            <li><a href="https://www.linkedin.com/in/lawunn-khaing-8980441ab/"> Introduction to Networks</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+
+        const darkbtn = document.getElementById('darkbtn');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkbtn.checked = true;
+        }
+
+        darkbtn.addEventListener('change', () => {
+            if (darkbtn.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+
+    </script>
+</body>
+
+</html>
