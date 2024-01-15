@@ -710,3 +710,24 @@ body {
         box-sizing: border-box;
     }
 }
+
+/* Add this CSS at the end of your existing CSS */
+@media screen and (max-width: 600px) {
+    .skills ul,
+    .networking ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills li,
+    .networking li {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .skills h2,
+    .networking h2,
+    .networking a {
+        text-align: center;
+    }
+}
