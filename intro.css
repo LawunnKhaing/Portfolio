@@ -651,3 +651,62 @@ body {
 #Contact .social a:last-child {
     margin-right: 0; /* Remove margin from the last social button */
 }
+
+/* Add this CSS at the end of your existing CSS */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .main h1 {
+        font-size: 2.5rem;
+    }
+
+    .main p {
+        font-size: 1rem;
+    }
+
+    /* Add similar adjustments for other elements as needed */
+}
+
+
+/* Add this CSS at the end of your existing CSS */
+@media screen and (max-width: 600px) {
+    ul {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        box-shadow: 0 4px 17px rgb(80 80 80 / 31%);
+        display: none;
+    }
+
+    ul.show {
+        display: flex;
+    }
+
+    ul li a {
+        opacity: 1;
+    }
+
+    #click:checked ~ ul {
+        display: flex;
+    }
+}
+
+
+/* Add this CSS at the end of your existing CSS */
+@media screen and (max-width: 600px) {
+    #Contact #contactForm input,
+    #Contact #contactForm textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
