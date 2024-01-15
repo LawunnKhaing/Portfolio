@@ -715,14 +715,14 @@ body {
 @media screen and (max-width: 600px) {
     .skills ul,
     .networking ul {
-        flex-direction: column;
-        align-items: center;
+        padding-left: 0;
     }
 
     .skills li,
     .networking li {
         width: 100%;
         margin-bottom: 1rem;
+        text-align: center;
     }
 
     .skills h2,
