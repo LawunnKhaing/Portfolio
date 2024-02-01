@@ -1,0 +1,5 @@
+# netlify.toml
+
+[build]
+  functions = "server.js"
+  command = "npm start"

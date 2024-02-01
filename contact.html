@@ -42,11 +42,11 @@
                 <p>lawunnkhaing.tgi@gmail.com</p>
         </div>
 
-        <form id="contactForm">
+        <form id="contactForm" action="/api/contact" method="post">
             <h2>Keep in Touch</h2>
-            <input type="text" id="fullName" placeholder="Enter your name" required>
-            <input type="tel" id="phoneNumber" placeholder="Enter your email" required>
-            <textarea id="message" placeholder="Write a message" rows="3" required></textarea>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your name" required>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <textarea id="message" name="message" placeholder="Write a message" rows="3" required></textarea>
             <button type="submit">Send</button>
         </form>
             <br>    </br>
