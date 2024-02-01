@@ -42,7 +42,7 @@
                 <p>lawunnkhaing.tgi@gmail.com</p>
         </div>
 
-        <form id="contactForm" action="/api/contact" method="post">
+        <form id="contactForm" action="/contact" method="post">
             <h2>Keep in Touch</h2>
             <input type="text" id="fullName" name="fullName" placeholder="Enter your name" required>
             <input type="email" id="email" name="email" placeholder="Enter your email" required>
@@ -80,16 +80,15 @@
 
 
     
-  // Get the query parameter from the URL
-  const params = new URLSearchParams(window.location.search);
-  const status = params.get('status');
+        const params = new URLSearchParams(window.location.search);
+        const status = params.get('status');
 
-  // Display a notification based on the status
-  if (status === 'success') {
-    alert('Message sent successfully!');
-  } else if (status === 'error') {
-    alert('Error sending message. Please try again.');
-  }
+        // Display a notification based on the status
+        if (status === 'success') {
+            alert('Message sent successfully!');
+        } else if (status === 'error') {
+            alert('Error sending message. Please try again.');
+        }
 
 
         

@@ -24,7 +24,11 @@ const Contact = mongoose.model('Data', dataSchema);
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-app.post('/api/contact', async (req, res) => {
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/contact.html');
+});
+
+app.post('/contact', async (req, res) => {
   const newData = new Contact({
     fullName: req.body.fullName,
     email: req.body.email,
@@ -43,8 +47,6 @@ app.post('/api/contact', async (req, res) => {
 });
 
 // Serve the contact.html file for any other route
-app.get('*', (req, res) => {
-  res.sendFile(__dirname + '/public/contact.html');
-});
+
 
 module.exports = app;
