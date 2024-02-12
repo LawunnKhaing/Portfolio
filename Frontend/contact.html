@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +40,7 @@
                 <p>lawunnkhaing.tgi@gmail.com</p>
         </div>
 
-        <form id="contactForm" action="/contact" method="post">
+        <form id="contactForm">
             <h2>Keep in Touch</h2>
             <input type="text" id="fullName" name="fullName" placeholder="Enter your name" required>
             <input type="email" id="email" name="email" placeholder="Enter your email" required>
@@ -56,11 +55,36 @@
             </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", async function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            // Get form data
+            const formData = new FormData(this);
+            const fullName = formData.get("fullName");
+            const email = formData.get("email");
+            const message = formData.get("message");
 
+            // Send data to backend
+            const response = await fetch("http://localhost:3000/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ fullName, email, message })
+            });
+
+            if (response.ok) {
+                alert("Message sent successfully!");
+                window.location.href = "contact.html";
+                // You can redirect or do anything else here after successful submission
+            } else {
+                alert("Failed to send message. Please try again later.");
+            }
+        });
+    </script>
 
     <script>
-
         const darkbtn = document.getElementById('darkbtn');
         const body = document.body;
         const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
@@ -78,27 +102,6 @@
                 localStorage.setItem('darkMode', 'disabled');
             }
         });
-
-        function handleSubmit(event) {
-            event.preventDefault();
-
-            const fullName = document.getElementById('fullName').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-
-            axios
-                .post('http://localhost:3000/api/contact', {fullName, email, message})
-                .then(response => {
-                    console.log('Message sent successfully');
-                    window.location.href = '/contact.html?status=success';
-                })
-                .catch(error => {
-                    console.error('Error sending message:', error);
-                    alert('Error sending message. Please try again.');
-                });
-        }
-    
-        document.getElementById('contactForm').addEventListener('submit', handleSubmit);
     </script>
 </body>
 
