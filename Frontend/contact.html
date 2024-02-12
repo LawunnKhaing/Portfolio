@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="intro.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header class="container">
+        <div class="page-header">
+            <input type="checkbox" id="click">
+
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </label>
+                <ul>
+                    <li><a href="index.html" style="--navAni:1">Home</a></li>
+                    <li><a href="skills.html" style="--navAni:3">Skills</a></li>
+                    <!-- <li><a href="#" style="--navAni:4">Projects</a></li> -->
+                    <li><a href="contact.html" style="--navAni:5">Contact</a></li>
+                </ul>
+            <label class="mode">
+                <input type="checkbox" id="darkbtn">
+                <i class='bx bxs-moon'></i>
+            </label>
+        </div>
+    </header>
+    
+    <section class="container" id="Contact">
+        <div class="Contact">
+            <h1>Phone Number</h1>
+                <p>+358 417918422</p>
+            <h1>Email</h1>
+                <p>lawunnkhaing.tgi@gmail.com</p>
+        </div>
+
+        <form id="contactForm" action="/contact" method="post">
+            <h2>Keep in Touch</h2>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your name" required>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <textarea id="message" name="message" placeholder="Write a message" rows="3" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+            <br>    </br>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/lawunn-khaing-8980441ab/" style="--socialAni:1"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://www.instagram.com/lawunn_2002/" style="--socialAni:2"><i class='bx bxl-instagram'></i></a>
+                <a href="https://github.com/LawunnKhaing" style="--socialAni:3"><i class='bx bxl-github'></i></a>
+            </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+    <script>
+
+        const darkbtn = document.getElementById('darkbtn');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkbtn.checked = true;
+        }
+
+        darkbtn.addEventListener('change', () => {
+            if (darkbtn.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+
+        function handleSubmit(event) {
+            event.preventDefault();
+
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            axios
+                .post('http://localhost:3000/api/contact', {fullName, email, message})
+                .then(response => {
+                    console.log('Message sent successfully');
+                    window.location.href = '/contact.html?status=success';
+                })
+                .catch(error => {
+                    console.error('Error sending message:', error);
+                    alert('Error sending message. Please try again.');
+                });
+        }
+    
+        document.getElementById('contactForm').addEventListener('submit', handleSubmit);
+    </script>
+</body>
+
+</html>

@@ -1,3 +1,0 @@
-[build]
-  command = "npm start"
-  publish = "public"  # Adjust this if your static files are in a different directory
