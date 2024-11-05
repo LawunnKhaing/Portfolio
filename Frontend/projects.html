@@ -41,10 +41,10 @@
                     I developed a user-centered prototype using figma with features like personalized recommendations, easy-to-read reviews, and a streamlined review submission process.
                     This project demonstrates my skills in user-focused design and creating functional, visually appealing mobile interfaces.</p>
                 <div class="project-images">
-                    <img src="./images/Login.png" alt="Project 1 Image 1">
-                    <img src="./images/Login 1.png" alt="Project 1 Image 2">
-                    <img src="./images/Movies.png" alt="Project 1 Image 3">
-                    <img src="./images/Settings.png" alt="Project 1 Image 4">
+                    <img src="./images/Login.png" alt="Project 1 Image 1" onclick="openLightbox(this)">
+                    <img src="./images/Login 1.png" alt="Project 1 Image 2" onclick="openLightbox(this)">
+                    <img src="./images/Movies.png" alt="Project 1 Image 3" onclick="openLightbox(this)">
+                    <img src="./images/Settings.png" alt="Project 1 Image 4" onclick="openLightbox(this)">
                 </div>
             </div>
 
@@ -60,9 +60,9 @@
                     <b>Workout Plans: </b>Provides workout plans for user.<br>
                 </p>
                 <div class="project-images">
-                    <img src="./images/Fitness Login.jpg" alt="Project 2 Image 1">
-                    <img src="./images/Fitness 1.jpg" alt="Project 2 Image 2">
-                    <img src="./images/Fitness 2.jpg" alt="Project 2 Image 3">
+                    <img src="./images/Fitness Login.jpg" alt="Project 2 Image 1" onclick="openLightbox(this)">
+                    <img src="./images/Fitness 1.jpg" alt="Project 2 Image 2" onclick="openLightbox(this)">
+                    <img src="./images/Fitness 2.jpg" alt="Project 2 Image 3" onclick="openLightbox(this)">
                 </div>
             </div>
 
@@ -75,38 +75,43 @@
                     The entire system is containerized using <b>Docker</b> for easy deployment.
                 </p>
                 <div class="project3-images">
-                    <img src="./images/system-architecture.png" alt="Project 3 Image 1">
-                    <img src="./images/weather-station-hardware(1).jpeg" alt="Project 3 Image 2">
-                    <img src="./images/grafana-example.jpeg" alt="Project 3 Image 3">
+                    <img src="./images/system-architecture.png" alt="Project 3 Image 1" onclick="openLightbox(this)">
+                    <img src="./images/weather-station-hardware(1).jpeg" alt="Project 3 Image 2" onclick="openLightbox(this)">
+                    <img src="./images/grafana-example.jpeg" alt="Project 3 Image 3" onclick="openLightbox(this)">
                 </div>
             </div>
 
             <div class="project-card">
-                <h2>Python Data processing using blender</h2>
+                <h2>Python Data processing using Blender</h2>
                 <p>This project involves creating a Blender Python script to visualize geographic height data from the National Land Survey of Finland.
                     Using ESRI grid files, the script reads height data to generate detailed 3D terrain models within Blender.
-                    This project showcases skills in Blender scripting, handling geographic data, and creating efficient 3D visualizations
+                    This project showcases skills in Blender scripting, handling geographic data, and creating efficient 3D visualizations.
                 </p>
                 <div class="project4-images">
-                    <img src="./images/Full Terrain Object.png" alt="Project 4 Image 1">
-                    <img src="./images/Terrain Object from side view.png" alt="Project 4 Image 2">
-                    <img src="./images/Showing Specific area.png" alt="Project 4 Image 3">
+                    <img src="./images/Full Terrain Object.png" alt="Project 4 Image 1" onclick="openLightbox(this)">
+                    <img src="./images/Terrain Object from side view.png" alt="Project 4 Image 2" onclick="openLightbox(this)">
+                    <img src="./images/Showing Specific area.png" alt="Project 4 Image 3" onclick="openLightbox(this)">
                 </div>
             </div>
-
+            
             <div class="project-card">
                 <h2>Task Activity Manager Website</h2>
                 <p>This is a full-stack web application designed for efficient task and activity management,
-                    built with <b>React</b> for the frontend, <b>Node.js</b>Node.js for the backend, and <b>MongoDB</b> as the database.
-                    The app allows users to create, edit, and delete tasks and activities, with progress tracking features for completed tasks. 
+                    built with <b>React</b> for the frontend, <b>Node.js</b> for the backend, and <b>MongoDB</b> as the database.
+                    The app allows users to create, edit, and delete tasks and activities, with progress tracking features for completed tasks.
                 </p>
                 <div class="project4-images">
-                    <img src="./images/Fullstack.png" alt="Project 5 Image 1">
-                    <img src="./images/Fullstack1.png" alt="Project 5 Image 2">
-                    <img src="./images/Fullstack2.png" alt="Project 5 Image 3">
+                    <img src="./images/Fullstack.png" alt="Project 5 Image 1" onclick="openLightbox(this)">
+                    <img src="./images/Fullstack1.png" alt="Project 5 Image 2" onclick="openLightbox(this)">
+                    <img src="./images/Fullstack2.png" alt="Project 5 Image 3" onclick="openLightbox(this)">
                 </div>
             </div>
-
+            
+            <!-- Lightbox Container -->
+            <div id="lightbox" onclick="closeLightbox()">
+                <span class="close">&times;</span>
+                <img class="lightbox-content" id="lightbox-img">
+            </div>
             <div class="contact-box">
                 <a href="contact.html">Contact Me for More</a>
             </div>
@@ -114,7 +119,7 @@
             
         </div>
     </section>
-
+    <script src="openlightbox.js"></script>
     <script src="darkmode.js"></script>
 </body>
 
