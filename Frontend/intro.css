@@ -25,7 +25,7 @@ body {
     width: 100%;
 }
 .text-color {
-    background: #F7086C;
+background: #F7086C;
 background: linear-gradient(to right, #F7086C 0%, #35c9fc 100%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
@@ -337,17 +337,7 @@ background: linear-gradient(to right, #F7086C 0%, #35c9fc 100%);
         opacity: 1;
     }
 }
-/* @keyframes ImgAni {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(-9px);
-    }
-    100% {
-        transform: translateX(0);
-    }
-} */
+
 @keyframes imageAni {
     0% {
         opacity: 0;
@@ -359,7 +349,7 @@ background: linear-gradient(to right, #F7086C 0%, #35c9fc 100%);
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 600px) {
     html {
         font-size: 80%;
     }
@@ -368,7 +358,7 @@ background: linear-gradient(to right, #F7086C 0%, #35c9fc 100%);
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
     html {
         font-size: 80%;
     }
@@ -440,10 +430,6 @@ background: linear-gradient(to right, #F7086C 0%, #35c9fc 100%);
 }
 
 
-.container {
-    padding: 0 8.4rem;
-}
-
 .skills {
     text-align: center;
     margin-bottom: 2rem;
@@ -453,39 +439,30 @@ background: linear-gradient(to right, #F7086C 0%, #35c9fc 100%);
     font-size: 3rem;
     font-weight: 600;
     opacity: 0;
-    animation: topSideAni 1s ease forwards;
-}
-
-.skills h1 {
-    font-size: 3rem;
     margin-bottom: 1rem;
     color: var(--primary-color);
+    animation: topSideAni 1s ease forwards;
 }
-
 
 .skills h2 {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 1rem;
+    color: rgb(176, 64, 204);
     animation:  rightSideAni 1s ease forwards;
 }
 
 .skills ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .skills li {
-    font-family: 'Outfit', sans-serif;
     font-size: 1.5rem;
+    font-weight: 400;
     margin-bottom: 0.5rem;
-    background: linear-gradient(to right, #F7086C 0%, #35c9fc 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: rgb(232, 83, 19);
     border: 1.6px solid;
     border-radius: 10px;
     padding: 0.39rem;
@@ -493,11 +470,13 @@ background: linear-gradient(to right, #F7086C 0%, #35c9fc 100%);
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.skills li:hover {
-    -webkit-text-fill-color: var(--primary-dark);
-    background: linear-gradient(90deg, rgba(255,95,109,1) 0%, rgba(53,201,252,1) 100%);
-    box-shadow: 0 0 20px;
-    transition: all .3s ease-in-out;
+.networking h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: rgb(176, 64, 204);
+    animation:  rightSideAni 1s ease forwards;
 }
 
 .networking ul{
@@ -509,31 +488,13 @@ background: linear-gradient(to right, #F7086C 0%, #35c9fc 100%);
     justify-content: center;
 }
 
-.networking li {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    background: linear-gradient(to right, #F7086C 0%, #35c9fc 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    border: 1.6px solid;
-    border-radius: 10px;
-    padding: 0.39rem;
-    text-align: center;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.networking h2{
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    text-align: center;
-    animation:  rightSideAni 1s ease forwards;
-}
-
-.networking a{
+.networking li a{
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
+    border: 1.6px solid;
+    border-radius: 10px;
+    color: rgb(232, 83, 19);
     animation:  rightSideAni 1s ease forwards;
 }
 
@@ -648,55 +609,6 @@ background: linear-gradient(to right, #F7086C 0%, #35c9fc 100%);
     margin-right: 0; /* Remove margin from the last social button */
 }
 
-/* Add this CSS at the end of your existing CSS */
-@media screen and (max-width: 480px) {
-    body {
-        font-size: 16px;
-    }
-
-    .container {
-        padding: 0 1rem;
-    }
-
-    .main h1 {
-        font-size: 2.5rem;
-    }
-
-    .main p {
-        font-size: 1rem;
-    }
-
-    /* Add similar adjustments for other elements as needed */
-}
-
-
-/* Add this CSS at the end of your existing CSS */
-@media screen and (max-width: 600px) {
-    ul {
-        position: fixed;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        background-color: #fff;
-        box-shadow: 0 4px 17px rgb(80 80 80 / 31%);
-        display: none;
-    }
-
-    ul.show {
-        display: flex;
-    }
-
-    ul li a {
-        opacity: 1;
-    }
-
-    #click:checked ~ ul {
-        display: flex;
-    }
-}
-
 
 /* Add this CSS at the end of your existing CSS */
 @media screen and (max-width: 600px) {
@@ -705,25 +617,96 @@ background: linear-gradient(to right, #F7086C 0%, #35c9fc 100%);
         width: 100%;
         box-sizing: border-box;
     }
+
+
 }
 
-/* Add this CSS at the end of your existing CSS */
-@media screen and (max-width: 600px) {
-    .skills ul,
-    .networking ul {
-        padding-left: 0;
-    }
 
-    .skills li,
-    .networking li {
-        width: 100%;
-        margin-bottom: 1rem;
-        text-align: center;
-    }
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 800px;
+}
 
-    .skills h2,
-    .networking h2,
-    .networking a {
-        text-align: center;
-    }
+.project-card {
+    background-color: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.project-card p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.project-images {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+}
+
+.project-images img {
+    width: 100%;
+    max-width: 250px; /* Increase the maximum width to make images larger */
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for better visibility */
+}
+
+.project3-images {
+    display: flex;
+    gap: 1rem; /* Adjust spacing between images */
+    overflow-x: auto;
+}
+
+.project3-images img {
+    width: 100%;
+    max-width: 500px; /* Increase the maximum width to make images larger */
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for better visibility */
+}
+
+
+.project4-images {
+    display: flex;
+    gap: 1.2rem; /* Adjust spacing between images */
+    overflow-x: auto;
+}
+
+.project4-images img {
+    width: 100%;
+    max-width: 600px; /* Increase the maximum width to make images larger */
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for better visibility */
+}
+
+.contact-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.contact-box a {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0073e6; /* You can change this color as needed */
+    border-radius: 4px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.contact-box a:hover {
+    background-color: #005bb5; /* Darker shade for hover effect */
 }
