@@ -209,7 +209,25 @@ background: linear-gradient(to right, #F7086C 0%, #35c9fc 100%);
     position: relative;
 }
 
-.main .btn {
+.btn-container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-r {
+    height: 42px;
+    width: 132px;
+    border-radius: 36px;
+    background: linear-gradient(to right, #F7086C 0%, #35c9fc 100%);
+    margin-top: 2rem;
+    padding: 1px;
+    opacity: 0;
+    animation: btn-ani 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.main .btn{
     height: 42px;
     width: 132px;
     border-radius: 36px;

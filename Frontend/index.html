@@ -50,8 +50,14 @@
                     attitude, excellent communication skills, and the ability to work well
                     in a team.
                 </p>
+                <div class = "btn-container">
                 <div class="btn">
                     <button onclick="downloadCV()">View My CV</button>
+                    
+                </div>
+                <div class="btn-r">
+                    <button onclick="downloadReference()">References</button>
+                </div>
                 </div>
                 
             </div>
@@ -86,6 +92,17 @@
 
         function downloadCV() {
             const cvUrl = 'https://github.com/LawunnKhaing/Portfolio/raw/main/Lawunn%20CV.pdf';
+
+            const link = document.createElement('a');
+            link.href = cvUrl;
+            link.setAttribute('download', 'Lawunn CV.pdf');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+            function downloadReference() {
+            const cvUrl = 'https://github.com/LawunnKhaing/Portfolio/raw/main/Reference.pdf';
 
             const link = document.createElement('a');
             link.href = cvUrl;
